@@ -1,0 +1,20 @@
+{% extends 'disenio.html' %}
+{% block title %} inicio {% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+        {% if session['name'] %}
+        BIENVENIDO  {{ session['name'] }} A LA EMPRESA AYS
+
+        {% else %}
+        <div class="text-center">
+        INICIA SESION PORFAVOR PARA CONTINUAR
+        <hr >
+        </div>
+        {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
